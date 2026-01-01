@@ -24,5 +24,6 @@ export interface SocialLink {
 export enum SupportProvider {
   BUymeACoffee = 'Buy Me a Coffee',
   PayPal = 'PayPal',
-  Paystack = 'Paystack'
+  Paystack = 'Paystack',
+  MPesa = 'Lipa na M-Pesa'
 }
