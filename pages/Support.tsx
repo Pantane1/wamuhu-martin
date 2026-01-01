@@ -51,7 +51,7 @@ const Support: React.FC = () => {
             <p className="text-slate-500 mt-2">Support directly via Lipa na M-Pesa (Kenya only).</p>
           </div>
           <div className="px-6 py-2 bg-green-50 text-green-700 rounded-full font-bold text-sm">
-            Open Link
+            Support Now
           </div>
         </button>
 
