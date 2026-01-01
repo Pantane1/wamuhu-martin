@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { SupportProvider } from '../types';
 
@@ -45,13 +46,9 @@ const SupportModal: React.FC<SupportModalProps> = ({ isOpen, onClose, provider }
       try {
         if (provider === SupportProvider.PayPal) {
           try {
-            // Attempt to load PayPal SDK
             await loadScript('https://www.paypal.com/sdk/js?client-id=test&currency=USD&components=buttons', 'paypal-sdk');
-            
-            // Check if paypal object is actually usable (prevents "can not read window host" crashes)
             if (isMounted && typeof paypal !== 'undefined' && paypal.Buttons) {
               setScriptLoaded(true);
-              // Small timeout to ensure DOM is ready for rendering
               setTimeout(() => {
                 if (isMounted && paypalContainerRef.current) renderPaypalButtons();
               }, 100);
