@@ -114,7 +114,7 @@ const Projects: React.FC = () => {
         <h2 className="text-3xl font-bold mb-4">Want to see more?</h2>
         <p className="text-blue-100 mb-8 max-w-lg mx-auto">Explore all my repositories and active contributions directly on my GitHub profile.</p>
         <a
-          href="https://github.com/pantane1"
+          href="https://github.com/Pantane1?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-2xl font-bold text-lg hover:shadow-2xl transition-all"
