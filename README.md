@@ -9,15 +9,16 @@
 
 **Pantane Hub** is a high-performance, minimalist professional portfolio built for **Wamuhu Martin**. It serves as a central showcase for software projects, professional connections, and technical explorations.
 
-[**Explore the Live Site ↗**](https://wamuhu-martin.vercel.app/#)
+[**Explore the Live Site ↗**](https://wamuhu-martin.vercel.app/)
 
 ---
 
 ## ✨ Key Features
 
 *   **⚡ Real-Time GitHub Sync:** Automatically fetches and displays repositories using the GitHub REST API. Includes dynamic topic chips and language detection.
-*   **💳 Integrated Payment Ecosystem:** A multi-channel support system for global and local transactions (see details below).
-*   **🛡️ Resilient Architecture:** Custom-built script loading logic to prevent crashes in restricted environments and handle SDK failures gracefully.
+*   **💳 Integrated Payment Ecosystem:** A multi-channel support system for global and local transactions featuring direct M-Pesa integration.
+*   **💨 Optimized UX:** Streamlined navigation with a "Direct-to-Action" philosophy, especially for local mobile payments.
+*   **🛡️ Resilient Architecture:** Custom-built script loading logic to prevent crashes in restricted environments and handle SDK failures (like PayPal/Paystack) gracefully.
 *   **📱 Mobile-First Design:** Fully responsive layout with fluid animations and a high-contrast, professional "Bright Mode" aesthetic.
 *   **🎨 Custom Branding:** Unique SVG iconography and consistent design language built from scratch.
 
@@ -25,21 +26,25 @@
 
 ## 💰 Integrated Payment Systems
 
-Pantane Hub features a robust, triple-tier payment integration designed to facilitate support from anywhere in the world, with specific optimizations for the African market.
+Pantane Hub features a robust, multi-tier payment integration designed to facilitate support from anywhere in the world, with specific optimizations for the Kenyan and African markets.
 
-### 1. PayPal (Global Transactions)
+### 1. Lipa na M-Pesa (Frictionless Local Support)
+*   **Integration:** Direct link via [lipana.dev](https://lipana.dev/pay/pantanehub).
+*   **UX:** One-click "Support Now" functionality that bypasses intermediate forms for the fastest possible mobile payment experience in Kenya.
+*   **Purpose:** Specifically designed for the 254 market to allow instant support via STK push or till number.
+
+### 2. PayPal (Global Transactions)
 *   **Integration:** Official PayPal JavaScript SDK.
-*   **UX:** Interactive "Smart Payment Buttons" that process Credit/Debit cards and PayPal credit securely.
-*   **Resilience:** Includes an automated **Direct Pay Fallback**. If the SDK is blocked by browser restrictions or iframes, the system generates a secure legacy PayPal link to ensure transactions are never lost.
+*   **UX:** Interactive "Smart Payment Buttons" for Credit/Debit cards.
+*   **Resilience:** Includes an automated **Direct Pay Fallback**. If the SDK is blocked or restricted, the system generates a secure legacy PayPal checkout link.
 
-### 2. Paystack (Local & M-Pesa Optimization)
+### 3. Paystack (Regional Africa)
 *   **Integration:** Paystack Inline JS.
-*   **Market Focus:** Primarily configured for **Kenya (+254)** and the broader African region.
-*   **Features:** Supports **M-Pesa**, local bank transfers, and mobile money, bridging the gap between global fintech and local payment habits.
+*   **Market Focus:** Preferred for secure card and mobile money transactions across the African continent.
 
-### 3. Buy Me a Coffee (Social Support)
+### 4. Buy Me a Coffee (Social Support)
 *   **Integration:** Lightweight URI-based redirection.
-*   **Purpose:** Provides a non-formal, social way for supporters to contribute to the journey with minimal friction.
+*   **Purpose:** Provides a non-formal, social way for supporters to contribute with minimal friction.
 
 ---
 
@@ -51,7 +56,7 @@ Pantane Hub features a robust, triple-tier payment integration designed to facil
 | **Styling** | Tailwind CSS (Utility-first design) |
 | **Logic** | TypeScript (Type-safe systems) |
 | **Data** | GitHub REST API |
-| **Fintech** | PayPal SDK, Paystack Inline |
+| **Fintech** | M-Pesa (via lipana.dev), PayPal SDK, Paystack |
 
 ---
 
@@ -96,4 +101,4 @@ This project uses **ES Modules** and modern web standards. Because of browser se
 ## 📜 License
 
 © 2025 **Wamuhu Martin (Pantane)**. Built with passion and precision.
-All rights reserved. 
+All rights reserved.
