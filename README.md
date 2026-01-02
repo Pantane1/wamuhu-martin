@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Pantane1/wamuhu-martin/main/favcon.png" alt="Logo" width="48" />
+</p>
+
 # 🚀 Pantane Hub 
 
 [![React](https://img.shields.io/badge/React-19-blue?logo=react)](https://reactjs.org/)
