@@ -1,6 +1,8 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Pantane1/wamuhu-martin/main/favcon.png" alt="Logo" width="48" />
-</p>
+<h1>
+  <img src="https://raw.githubusercontent.com/Pantane1/wamuhu-martin/main/favcon.png" width="32" style="vertical-align: middle;" />
+  Pantane Hub
+</h1>
+
 
 # 🚀 Pantane Hub 
 
