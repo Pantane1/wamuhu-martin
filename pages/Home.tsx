@@ -34,15 +34,19 @@ const Home: React.FC = () => {
             Welcome to <span className="text-blue-600">Pantane Hub.</span>
           </h1>
           <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
-            i'm Wamuhu Martin driven by curiosity, clean systems, and building things that actually work.
+            I'm Wamuhu Martin — driven by curiosity, clean systems, and building things that actually work.
             This space is where I share what I’m building, what I’m learning, and what I’m exploring next.
+            Feel free to look around, check out my projects, connect with me, or reach out if you'd like us to build something together.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4 flex-wrap">
             <button
-              onClick={() => window.location.hash = '#projects'}
-              className="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold text-lg hover:bg-slate-800 hover:shadow-2xl transition-all"
+              onClick={() => window.open('https://resume-joe.vercel.app/', '_blank')}
+              className="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold text-lg hover:bg-slate-800 hover:shadow-2xl transition-all flex items-center justify-center gap-2"
             >
-              View My Work
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              My Resume
             </button>
             <button
               onClick={() => window.location.hash = '#contact'}
