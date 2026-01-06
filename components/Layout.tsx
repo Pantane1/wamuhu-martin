@@ -74,6 +74,8 @@ const TechMarquee = () => {
               <img 
                 src={`https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/${tech.slug}.svg`}
                 alt={tech.name}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"
               />
             </div>
