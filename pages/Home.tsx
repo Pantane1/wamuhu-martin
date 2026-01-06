@@ -20,7 +20,6 @@ const NavCard = ({ title, description, icon, hash }: { title: string, descriptio
 );
 
 const Home: React.FC = () => {
-  // Using actual GitHub profile picture
   const profileImg = "https://github.com/pantane1.png";
 
   return (
@@ -37,7 +36,6 @@ const Home: React.FC = () => {
           <p className="text-xl text-slate-600 leading-relaxed max-w-2xl">
             i'm Wamuhu Martin driven by curiosity, clean systems, and building things that actually work.
             This space is where I share what I’m building, what I’m learning, and what I’m exploring next.
-            Feel free to look around, check out my projects, connect with me, or reach out if you’d like us to build something together.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
             <button
