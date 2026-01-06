@@ -59,6 +59,8 @@ const Home: React.FC = () => {
               <img
                 src={profileImg}
                 alt="Wamuhu Martin"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = 'https://picsum.photos/600/800';
