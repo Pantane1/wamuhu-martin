@@ -6,6 +6,88 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
+const TechMarquee = () => {
+  const techs = [
+    // Web Frameworks
+    { name: 'React', slug: 'react' },
+    { name: 'Vue.js', slug: 'vuedotjs' },
+    { name: 'Angular', slug: 'angular' },
+    { name: 'Next.js', slug: 'nextdotjs' },
+    { name: 'Django', slug: 'django' },
+    { name: 'Laravel', slug: 'laravel' },
+    { name: 'Spring', slug: 'spring' },
+    { name: 'Flask', slug: 'flask' },
+    // Languages & Runtimes
+    { name: 'TypeScript', slug: 'typescript' },
+    { name: 'Node.js', slug: 'nodedotjs' },
+    { name: 'Python', slug: 'python' },
+    { name: 'Go', slug: 'go' },
+    { name: 'Rust', slug: 'rust' },
+    { name: 'C++', slug: 'cplusplus' },
+    // ML & Data Science
+    { name: 'TensorFlow', slug: 'tensorflow' },
+    { name: 'PyTorch', slug: 'pytorch' },
+    { name: 'Keras', slug: 'keras' },
+    { name: 'Scikit-Learn', slug: 'scikitlearn' },
+    { name: 'Pandas', slug: 'pandas' },
+    { name: 'NumPy', slug: 'numpy' },
+    { name: 'OpenCV', slug: 'opencv' },
+    { name: 'Hugging Face', slug: 'huggingface' },
+    { name: 'OpenAI', slug: 'openai' },
+    // Tools & Cloud
+    { name: 'Docker', slug: 'docker' },
+    { name: 'Kubernetes', slug: 'kubernetes' },
+    { name: 'AWS', slug: 'amazonwebservices' },
+    { name: 'Azure', slug: 'microsoftazure' },
+    { name: 'Google Cloud', slug: 'googlecloud' },
+    { name: 'PostgreSQL', slug: 'postgresql' },
+    { name: 'MongoDB', slug: 'mongodb' },
+    { name: 'Redis', slug: 'redis' },
+    { name: 'GraphQL', slug: 'graphql' },
+    { name: 'Tailwind', slug: 'tailwindcss' },
+    { name: 'Git', slug: 'git' },
+    { name: 'Vite', slug: 'vite' },
+    { name: 'Jenkins', slug: 'jenkins' },
+  ];
+
+  return (
+    <div className="w-full bg-white py-6 border-y border-slate-100 overflow-hidden relative">
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          display: flex;
+          width: max-content;
+          animation: scroll 60s linear infinite;
+        }
+        .animate-marquee:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+      <div className="animate-marquee">
+        {[...techs, ...techs].map((tech, idx) => (
+          <div key={idx} className="flex items-center space-x-3 px-8 group transition-all duration-300">
+            <div className="w-6 h-6 flex items-center justify-center">
+              <img 
+                src={`https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/${tech.slug}.svg`}
+                alt={tech.name}
+                className="w-full h-full grayscale opacity-30 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-500"
+              />
+            </div>
+            <span className="text-[10px] font-black text-slate-300 group-hover:text-slate-900 transition-colors uppercase tracking-[0.15em] whitespace-nowrap">
+              {tech.name}
+            </span>
+          </div>
+        ))}
+      </div>
+      <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+    </div>
+  );
+};
+
 const PrivacyModal = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {
   if (!isOpen) return null;
   return (
@@ -65,14 +147,12 @@ export const Header: React.FC = () => {
       </div>
 
       <div className="flex items-center space-x-4 md:space-x-8">
-        {/* Navigation Links - subtle for desktop */}
         <nav className="hidden lg:flex items-center space-x-6 mr-6 border-r border-slate-200 pr-6">
           <button onClick={() => window.location.hash = '#projects'} className="text-sm font-bold text-slate-500 hover:text-slate-900 transition-colors">PROJECTS</button>
           <button onClick={() => window.location.hash = '#support'} className="text-sm font-bold text-slate-500 hover:text-slate-900 transition-colors">SUPPORT</button>
           <button onClick={() => window.location.hash = '#contact'} className="text-sm font-bold text-slate-500 hover:text-slate-900 transition-colors">CONTACT</button>
         </nav>
 
-        {/* Social Icons matching the reference image */}
         <div className="flex items-center space-x-4">
           <a href="https://github.com/pantane1" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors">
             <GithubIcon className="w-5 h-5" />
@@ -94,7 +174,7 @@ export const Footer: React.FC = () => {
   const [showTerms, setShowTerms] = useState(false);
 
   return (
-    <footer className="mt-20 py-12 border-t border-slate-100 bg-white">
+    <footer className="mt-0 py-12 border-t border-slate-100 bg-white">
       <div className="max-w-7xl mx-auto px-4 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 text-center md:text-left">
           <div>
@@ -127,6 +207,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <main className="flex-grow max-w-7xl mx-auto w-full px-4 md:px-12 py-8 md:py-16">
         {children}
       </main>
+      <TechMarquee />
       <Footer />
     </div>
   );
