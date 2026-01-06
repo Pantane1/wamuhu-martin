@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { GithubIcon, LinkedInIcon, TwitterIcon } from './Icons';
+import MouseEffect from './MouseEffect';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -202,13 +203,16 @@ export const Footer: React.FC = () => {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col selection:bg-amber-100 selection:text-amber-900">
+    <div className="min-h-screen flex flex-col selection:bg-amber-100 selection:text-amber-900 relative">
+      <MouseEffect />
       <Header />
-      <main className="flex-grow max-w-7xl mx-auto w-full px-4 md:px-12 py-8 md:py-16">
+      <main className="flex-grow max-w-7xl mx-auto w-full px-4 md:px-12 py-8 md:py-16 relative z-10">
         {children}
       </main>
-      <TechMarquee />
-      <Footer />
+      <div className="relative z-10 bg-white">
+        <TechMarquee />
+        <Footer />
+      </div>
     </div>
   );
 };
