@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { GithubIcon, LinkedInIcon, TwitterIcon, InstagramIcon, FacebookIcon } from '../components/Icons';
+import { GithubIcon, LinkedInIcon, TwitterIcon, InstagramIcon, FacebookIcon, WhatsAppIcon } from '../components/Icons';
 
 const SocialCard = ({ name, handle, icon, url, color }: { name: string, handle: string, icon: React.ReactNode, url: string, color: string }) => (
   <a
@@ -23,6 +23,8 @@ const SocialCard = ({ name, handle, icon, url, color }: { name: string, handle: 
 );
 
 const Socials: React.FC = () => {
+  const whatsappMessage = encodeURIComponent("hi, got your number from your website.");
+  
   return (
     <div className="fade-in max-w-4xl mx-auto space-y-12">
       <div className="text-center space-y-4">
@@ -33,6 +35,13 @@ const Socials: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <SocialCard
+          name="WhatsApp"
+          handle="+254 740 312 402"
+          url={`https://wa.me/254740312402?text=${whatsappMessage}`}
+          icon={<WhatsAppIcon className="w-8 h-8" />}
+          color="#25D366"
+        />
         <SocialCard
           name="GitHub"
           handle="@pantane1"
