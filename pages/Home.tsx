@@ -40,7 +40,7 @@ const Home: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4 flex-wrap">
             <button
-              onClick={() => window.open('https://resume-joe.vercel.app/', '_blank')}
+              onClick={() => window.open('https://github.com/Pantane1/m1wamuhu-resume', '_blank')}
               className="w-full sm:w-auto px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold text-lg hover:bg-slate-800 hover:shadow-2xl transition-all flex items-center justify-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
