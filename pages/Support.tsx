@@ -8,7 +8,7 @@ const Support: React.FC = () => {
   const [selectedProvider, setSelectedProvider] = useState<SupportProvider | null>(null);
 
   const handleMpesaClick = () => {
-    window.open('https://lipana.dev/pay/pantanehub', '_blank');
+    window.open('https://lipana.dev/pay/c2chomee', '_blank');
   };
 
   return (
