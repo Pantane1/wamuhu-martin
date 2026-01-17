@@ -37,35 +37,35 @@ const Socials: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <SocialCard
           name="WhatsApp"
-          handle="+254 740 312 402"
+          handle="𝑃𝑎𝑛𝑡𝑎𝑛𝑒_§"
           url={`https://wa.me/254740312402?text=${whatsappMessage}`}
           icon={<WhatsAppIcon className="w-8 h-8" />}
           color="#25D366"
         />
         <SocialCard
           name="GitHub"
-          handle="@Pantane1"
+          handle="Pantane1"
           url="https://github.com/pantane1"
           icon={<GithubIcon className="w-8 h-8" />}
           color="#181717"
         />
         <SocialCard
           name="LinkedIn"
-          handle="Pantane Hub"
+          handle="Pantane_HUb"
           url="https://www.linkedin.com/in/pantane/"
           icon={<LinkedInIcon className="w-8 h-8" />}
           color="#0A66C2"
         />
         <SocialCard
           name="Twitter / X"
-          handle="@pantane4"
+          handle="Pantane4"
           url="https://twitter.com/pantane4"
           icon={<TwitterIcon className="w-8 h-8" />}
           color="#000000"
         />
         <SocialCard
           name="Instagram"
-          handle="@PANTANE"
+          handle="PANTANE"
           url="https://instagram.com/_pantane_"
           icon={<InstagramIcon className="w-8 h-8" />}
           color="#E4405F"
