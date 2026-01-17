@@ -44,7 +44,7 @@ const Socials: React.FC = () => {
         />
         <SocialCard
           name="GitHub"
-          handle="@pantane1"
+          handle="@Pantane1"
           url="https://github.com/pantane1"
           icon={<GithubIcon className="w-8 h-8" />}
           color="#181717"
@@ -65,8 +65,8 @@ const Socials: React.FC = () => {
         />
         <SocialCard
           name="Instagram"
-          handle="@pantan_e4"
-          url="https://instagram.com/pantan_e4"
+          handle="@PANTANE"
+          url="https://instagram.com/_pantane_"
           icon={<InstagramIcon className="w-8 h-8" />}
           color="#E4405F"
         />
