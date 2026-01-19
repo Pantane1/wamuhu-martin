@@ -95,12 +95,6 @@ const Home: React.FC = () => {
           icon="✉️"
           hash="#contact"
         />
-        <NavCard
-          title="Support"
-          description="Support the journey and help me keep building better tools."
-          icon="☕"
-          hash="#support"
-        />
       </section>
     </div>
   );
