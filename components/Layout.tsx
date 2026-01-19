@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { GithubIcon, LinkedInIcon, TwitterIcon } from './Icons';
 import MouseEffect from './MouseEffect';
@@ -187,16 +186,37 @@ export const Footer: React.FC = () => {
             </div>
             <p className="text-slate-500 mt-1 italic text-sm">Powered by Pantane — built different.</p>
           </div>
+
           <div className="flex flex-col items-center md:items-end">
             <div className="flex items-center space-x-4 mb-2">
-              <button onClick={() => setShowPrivacy(true)} className="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors">Privacy Policy</button>
+              <button
+                onClick={() => window.location.hash = '#support'}
+                className="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors"
+              >
+                Support
+              </button>
               <span className="text-slate-300">|</span>
-              <button onClick={() => setShowTerms(true)} className="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors">Terms of Use</button>
+
+              <button
+                onClick={() => setShowPrivacy(true)}
+                className="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors"
+              >
+                Privacy Policy
+              </button>
+              <span className="text-slate-300">|</span>
+
+              <button
+                onClick={() => setShowTerms(true)}
+                className="text-sm font-medium text-slate-500 hover:text-blue-600 transition-colors"
+              >
+                Terms of Use
+              </button>
             </div>
             <p className="text-sm text-slate-400 font-medium">© 2025 Pantane. All rights reserved.</p>
           </div>
         </div>
       </div>
+
       <PrivacyModal isOpen={showPrivacy} onClose={() => setShowPrivacy(false)} />
       <TermsModal isOpen={showTerms} onClose={() => setShowTerms(false)} />
     </footer>
@@ -220,3 +240,4 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
+        
