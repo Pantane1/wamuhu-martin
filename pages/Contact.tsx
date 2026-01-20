@@ -1,4 +1,4 @@
-in my project the contact.tsx is "
+
 import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
@@ -99,4 +99,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default Contact;"
+export default Contact;
