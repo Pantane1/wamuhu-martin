@@ -1,46 +1,19 @@
-import React, { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
+in my project the contact.tsx is "
+import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  // Create a reference to the form
-  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formRef.current) return;
-
-    setLoading(true);
-
-    emailjs
-      .sendForm(
-        'service_nrtkgck',   // Replace with your EmailJS service ID
-        'template_b1391e3',  // Replace with your EmailJS template ID
-        formRef.current,
-        '6B39GrANe3KTTGYGH'    // Replace with your EmailJS public key
-      )
-      .then(
-        (result) => {
-          console.log('Email successfully sent!', result.text);
-          setSubmitted(true);
-          setLoading(false);
-          formRef.current?.reset();
-          setTimeout(() => setSubmitted(false), 5000);
-        },
-        (error) => {
-          console.error('Error sending email:', error.text);
-          setLoading(false);
-          alert('Oops! Something went wrong. Please try again.');
-        }
-      );
+    // In a real app, integrate EmailJS or a backend
+    setSubmitted(true);
+    setTimeout(() => setSubmitted(false), 5000);
   };
 
   return (
     <div className="fade-in max-w-5xl mx-auto space-y-16">
       <div className="grid lg:grid-cols-2 gap-16">
-        {/* Left info panel */}
         <div className="space-y-8">
           <h1 className="text-5xl font-extrabold text-slate-900 leading-tight">
             Have a project in mind?<br/><span className="text-blue-600">Let’s build it.</span>
@@ -49,7 +22,6 @@ const Contact: React.FC = () => {
             Have an idea, a project, or a collaboration in mind? Reach out — I’m always open to meaningful conversations and opportunities.
           </p>
 
-          {/* Contact methods */}
           <div className="space-y-6 pt-4">
             <a href="mailto:pantane254@gmail.com" className="flex items-center space-x-6 group">
               <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-blue-600 shadow-sm border border-slate-100 group-hover:bg-blue-600 group-hover:text-white transition-all">
@@ -73,7 +45,6 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Contact form */}
         <div className="bg-white p-10 rounded-[2.5rem] border border-slate-100 shadow-xl">
           {submitted ? (
             <div className="h-full flex flex-col items-center justify-center text-center space-y-4">
@@ -84,12 +55,11 @@ const Contact: React.FC = () => {
               <p className="text-slate-500">Thanks for reaching out. I'll get back to you within 24 hours.</p>
             </div>
           ) : (
-            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-slate-700 ml-1">Your Name</label>
                   <input
-                    name="name"
                     required
                     type="text"
                     className="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition-all"
@@ -99,7 +69,6 @@ const Contact: React.FC = () => {
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-slate-700 ml-1">Email Address</label>
                   <input
-                    name="email"
                     required
                     type="email"
                     className="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition-all"
@@ -110,7 +79,6 @@ const Contact: React.FC = () => {
               <div className="space-y-2">
                 <label className="text-sm font-bold text-slate-700 ml-1">Message</label>
                 <textarea
-                  name="message"
                   required
                   rows={5}
                   className="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition-all resize-none"
@@ -119,10 +87,9 @@ const Contact: React.FC = () => {
               </div>
               <button
                 type="submit"
-                disabled={loading}
                 className="w-full py-5 bg-blue-600 text-white rounded-2xl font-bold text-lg hover:bg-blue-700 shadow-xl shadow-blue-100 transition-all active:scale-95"
               >
-                {loading ? 'Sending...' : 'Send Message'}
+                Send Message
               </button>
             </form>
           )}
@@ -132,4 +99,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default Contact;
+export default Contact;"
