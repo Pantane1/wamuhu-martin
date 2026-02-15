@@ -120,6 +120,15 @@ const Contact: React.FC = () => {
                   placeholder="Tell me about your project..."
                 />
               </div>
+              {/* File Upload */}
+              <div className="space-y-2">
+              <label className="text-sm font-bold text-slate-700 ml-1">Attach File</label>
+              <input
+                type="file"
+                name="attachment"   // must match your EmailJS template variable
+                className="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-2xl"
+                />
+              </div>
               {error && <p className="text-red-500">{error}</p>}
               <button
                 type="submit"
